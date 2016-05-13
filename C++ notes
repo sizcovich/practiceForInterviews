@@ -1,0 +1,58 @@
+C++:
+
+Convertir a int o char: (char)i
+Concatenar chars: +
+Declare an array:
+	sizeof()
+	int array[] = { 1, 2, 3 };
+	para accederlo -> array[1] 
+	int (*p)[3]
+	para accederlo -> *(p+1)
+
+Randomize RAND():
+#include<time.h>
+
+srand(time(NULL));
+int rand_num = rand() % 100;
+
+Vectos std:
+vector<vector<int> > v(10, vector<int>(10,1)) -> matriz de 10*10 de 1s
+
+Strings std:
+std::string str2="Writing ";
+str.append(str3,6,3); -> appendeo a partir del 6to caracter hasta 6+3
+end() es para iterador, empty(), front(), back()
+
+Para imprimir un string
+for ( std::string::iterator it=str.begin(); it!=str.end(); ++it)
+    std::cout << *it;
+  	std::cout << '\n';
+
+Get a char from an int: char m_char = '0' + six;
+Get an int from a char: (int)m_char - '0';
+
+Matrix:
+ int A[3][4] = { {1,2,3,4} , {4,5,7,8} , {9,10,11,12} } ;
+  for(int rows=0 ; rows<sizeof(A)/sizeof(*A) ; rows++)
+    {
+        for(int columns=0 ; columns< sizeof(*A) / sizeof(*A[0]) ; columns++)
+        {
+            cout<<A[rows][columns] <<"\t" ;
+        }
+        cout<<endl ;
+    }
+
+Data structures:
+
+Hash tables: maps keys to values. It has an array and a hash function
+when you want to insert an object and its key, the hash function maps the key to an integer which indicates the index in the array
+We can implement it with a balanced binary search tree -> guarantee an O(log n) lookup time.
+
+ArrayList: dinamically resizing array. Amortized time is O(1) 
+
+Trie: 
+- tree where each vertex represents a word or prefix, the root is an empty string, markers indicate end of words
+used to index and search strings in a text
+
+
+Heap:
